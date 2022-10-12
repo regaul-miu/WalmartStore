@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var resultContracts = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){ result->    if(result.resultCode == Activity.RESULT_OK){
-            var dataIntent=result.data?.getSerializableExtra("user")
+            var dataIntent=result.data?.getSerializableExtra("newUser")
             var user:User=dataIntent as User
            userList.add(user)
         }
