@@ -18,9 +18,8 @@ class AccountRegistration : AppCompatActivity() {
             val pass=passwd.text.toString()
 
             if(fname.isNotEmpty() && lname.isNotEmpty() && email.isNotEmpty() && pass.isNotEmpty()){
-                var tampUser=User(email, pass, fname,lname)
-                var intent=Intent()
-                intent.putExtra("userList",tampUser)
+                var tempUser=User(email, pass, fname,lname)
+                intent.putExtra("newUser",tempUser)
                 setResult(RESULT_OK,intent)
                 finish()
             }
